@@ -11,7 +11,7 @@ function init() {
 
 function loadCallback () {	
 	var plainText = "THEBOYWALKSINTHE";
-	var request = gapi.client.cryptoAPI.getN({'n': plainText}).execute(function(q) {alert(q);}
+	var request = gapi.client.cryptoAPI.getN({'n': plainText}).execute(function(q) {alert(q);});
 	
 	request.execute(testService);
 }
