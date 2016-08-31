@@ -10,5 +10,10 @@ function init() {
 }
 
 function loadCallback () {	
-	alert("hola");
+	var request = gapi.client.cryptoAPI.generateKey({'n': 5});
+	request.execute(testService));
+}
+
+function testService (response) {
+	alert(response.message);	
 }
