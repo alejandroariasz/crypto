@@ -10,8 +10,8 @@ function init() {
 }
 
 function loadCallback () {	
-	var n = 4;
-	var request = gapi.client.cryptoAPI.generateKey({'n': n});
+	var plainText = "THEBOYWALKSINTHE";
+	var request = gapi.client.cryptoAPI.getN({'n': plainText});
 	request.execute(testService);
 }
 
