@@ -8,7 +8,7 @@ function init() {
 	var rootpath = 'https://' + 'crypto-142003.appspot.com' + '/_ah/api';	
 	gapi.client.load('cryptoAPI', 'v1', function(){
 		var plainText = 'THEBOYWALKSINTHE';
-		var request = gapi.client.cryptoAPI.getN({'n':plainText});
+		var request = gapi.client.cryptoAPI.getN.getN({'n':plainText});
 		request.execute(testService);
 	});
 }
