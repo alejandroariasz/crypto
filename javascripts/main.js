@@ -5,16 +5,13 @@ var scopes = 'profile';
 function init() {
 	
 	gapi.client.setApiKey(apiKey);
-	var rootpath = "https://" + "crypto-142003.appspot.com" + "/_ah/api/";	
-	gapi.client.load('cryptoAPI', 'v1', loadCallback, rootpath);
+	var rootpath = 'https://' + 'crypto-142003.appspot.com' + '/_ah/api';	
+	gapi.client.load('cryptoAPI', 'v1', loadCallback, function(){
+		var plainText = 'THEBOYWALKSINTHE';
+		var request = gapi.client.cryptoAPI.getN({'n':plainText});
+		request.execute(testService);
+	});
 	hola();
-}
-function loadCallback(){}
-
-function hola () {	
-	var plainText = "THEBOYWALKSINTHE";
-	var request = gapi.client.cryptoAPI.getN({'n': plainText});
-	request.execute(testService);
 }
 
 function testService (response) {
