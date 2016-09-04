@@ -5,7 +5,7 @@ var scopes = 'profile';
 function init() {
 	
 	gapi.client.setApiKey(apiKey);
-	var rootpath = 'https://' +  apiKey + '.appspot.com' + '/_ah/api';	
+	var rootpath = 'https://' +  apiKey + '.appspot.com' + '/_ah/api/';	
 	gapi.client.load('cryptoAPI', 'v2', function(){
 		var plainText = 'THEBOYWALKSINTHE';
 		var request = gapi.client.cryptoAPI.getN({'n':plainText});
