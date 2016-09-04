@@ -10,7 +10,7 @@ function init() {
 		var plainText = 'THEBOYWALKSINTHE';
 		var request = gapi.client.cryptoAPI.getN({'n':plainText});
 		request.execute(testService);
-	});
+	}, rootpath);
 }
 
 function testService (response) {
