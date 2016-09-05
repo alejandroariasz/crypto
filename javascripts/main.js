@@ -5,7 +5,7 @@ var scopes = 'profile';
 function init() {
 	
 	gapi.client.setApiKey(apiKey);
-	var rootpath = '//' +  window.location.host + '/_ah/api';	
+	var rootpath = 'https://' +  "turning-grille" + ".appspot.com" +  '/_ah/api';	
 	gapi.client.load('turning', 'v1', function(){
 		var n = 4;
 		var request = gapi.client.turning.generateKey({'n': n});
