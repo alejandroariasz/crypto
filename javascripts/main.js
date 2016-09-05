@@ -14,5 +14,7 @@ function init() {
 }
 
 function testService (response) {
-	alert(response.data[0]);
+	var arr = Object.keys(response.data).map(function(k) { return obj[k]; });
+	alert(arr[0]);
+	alert(response.data);
 }
