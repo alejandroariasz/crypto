@@ -15,7 +15,7 @@ function init() {
 
 function testService (response) {
 	alert(response.data);
-	alert( stringToArray(response.data) );
+	alert( stringToArray(response.data)[0] );
 }
 
 function stringToArray(stringToParse){
