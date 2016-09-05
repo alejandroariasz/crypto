@@ -1,14 +1,14 @@
-var apiKey = 'crypto-142421';
-var clientId = '1097746394668-ar5cp8agmfshrmf4f3q1dl72j80hfp6d.apps.googleusercontent.com';
+var apiKey = 'AIzaSyDMUhDepvPT_wN5dWY0GMtwsi1K9wgl4R4';
+var clientId = '880095029109-1n00qprerku742mvaot83ddnvcnsc7u6.apps.googleusercontent.com';
 var scopes = 'profile';
 
 function init() {
 	
 	gapi.client.setApiKey(apiKey);
-	var rootpath = 'https://' +  apiKey + '.appspot.com' + '/_ah/api/';	
-	gapi.client.load('cryptoAPI', 'v2', function(){
-		var plainText = 'THEBOYWALKSINTHE';
-		var request = gapi.client.cryptoAPI.getN({'plainText':plainText});
+	var rootpath = '//' +  window.location.host + '/_ah/api';	
+	gapi.client.load('turning', 'v1', function(){
+		var n = 4;
+		var request = gapi.client.turning.generateKey({'n': n});
 		request.execute(testService);
 	}, rootpath);
 }
