@@ -18,7 +18,7 @@ function testService (response) {
 	alert( stringToArray(response.data) );
 }
 
-function stringToArray(var stringToParse){
+function stringToArray(stringToParse){
 	stringToParse.replace("[", "");
 	stringToParse.replace("]", "");
 	var arr = stringToParse.split(",");
