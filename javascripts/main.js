@@ -14,7 +14,13 @@ function init() {
 }
 
 function testService (response) {
-	var arr = Object.keys(response.data).map(function(k) { return response.data[k]; });
-	alert(arr[0]);
 	alert(response.data);
+	alert( stringToArray(response.data) );
+}
+
+function stringToArray(var stringToParse){
+	stringToParse.replace("[", "");
+	stringToParse.replace("]", "");
+	var arr = stringToParse.split(",");
+	return arr;
 }
