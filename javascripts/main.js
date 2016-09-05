@@ -14,5 +14,5 @@ function init() {
 }
 
 function testService (response) {
-	alert(response.data);
+	alert(response.data[0]);
 }
